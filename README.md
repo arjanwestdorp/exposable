@@ -222,10 +222,6 @@ Now you're good to go and set either the `default-guard => 'member'` in your con
 
 Please see [CHANGELOG](CHANGELOG.md) for more information about what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for more information.
-
 ## Security
 
 If you discover any security issues, please email arjanwestdorp@gmail.com instead of creating an issue.
