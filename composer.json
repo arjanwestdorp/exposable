@@ -1,6 +1,6 @@
 {
   "name": "arjanwestdorp/exposable",
-  "description": "A laravel 5 package to expose parts of your application in a secure way.",
+  "description": "A laravel 5 package to expose protected model in a secure way.",
   "keywords": [
     "arjan",
     "westdorp",

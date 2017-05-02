@@ -1,5 +1,12 @@
 ## Laravel exposable
-This is a package to expose your models in a secure way. 
+[![Latest Stable Version](https://poser.pugx.org/arjanwestdorp/exposable/v/stable?format=flat-square)](https://packagist.org/packages/arjanwestdorp/exposable)
+[![License](https://poser.pugx.org/arjanwestdorp/exposable/license?format=flat-square)](https://packagist.org/packages/arjanwestdorp/exposable)
+[![Build Status](https://img.shields.io/travis/arjanwestdorp/exposable/master.svg?style=flat-square)](https://travis-ci.org/arjanwestdorp/exposable)
+[![Quality Score](https://img.shields.io/scrutinizer/g/arjanwestdorp/exposable.svg?style=flat-square)](https://scrutinizer-ci.com/g/arjanwestdorp/exposable)
+[![Coverage](https://img.shields.io/scrutinizer/coverage/g/arjanwestdorp/exposable.svg?style=flat-square)](https://scrutinizer-ci.com/g/arjanwestdorp/exposable)
+[![StyleCI](https://styleci.io/repos/89977324/shield)](https://styleci.io/repos/89977324)
+
+This is a package to expose your protected models in a secure way. 
 You maybe also ran into the problem that you have a file stored in a secure location and you only want to expose it to your users when they are logged in or payed for it.
 Laravel exposable will make this much easier for you now.
 
