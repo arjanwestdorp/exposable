@@ -1,0 +1,48 @@
+{
+  "name": "arjanwestdorp/exposable",
+  "description": "A laravel 5 package to expose parts of your application in a secure way.",
+  "keywords": [
+    "arjan",
+    "westdorp",
+    "laravel",
+    "expose"
+  ],
+  "homepage": "https://github.com/arjanwestdorp/exposable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arjan Westdorp",
+      "email": "arjanwestdorp@gmail.com",
+      "homepage": "http://www.trait-development.nl",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6.0",
+    "illuminate/support": "^5.3",
+    "league/uri": "^4.2.2",
+    "nesbot/carbon": "^1.22"
+  },
+  "require-dev": {
+    "mockery/mockery": "^0.9.5",
+    "orchestra/testbench": "~3.3.7",
+    "phpunit/phpunit": "5.7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ArjanWestdorp\\Exposable\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ArjanWestdorp\\Exposable\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
