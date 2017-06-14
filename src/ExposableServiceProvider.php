@@ -52,9 +52,9 @@ class ExposableServiceProvider extends ServiceProvider
      */
     protected function registerMiddleware()
     {
-        $this->app['router']->middleware('exposable.signature', CheckSignature::class);
-        $this->app['router']->middleware('exposable.guard', Authorize::class);
-        $this->app['router']->middleware('exposable.expire', CheckExpiration::class);
+        $this->app['router']->aliasMiddleware('exposable.signature', CheckSignature::class);
+        $this->app['router']->aliasMiddleware('exposable.guard', Authorize::class);
+        $this->app['router']->aliasMiddleware('exposable.expire', CheckExpiration::class);
     }
 
     /**

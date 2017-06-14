@@ -10,6 +10,13 @@ This is a package to expose your protected models in a secure way.
 You maybe also ran into the problem that you have a file stored in a secure location and you only want to expose it to your users when they are logged in or payed for it.
 Laravel exposable will make this much easier for you now.
 
+## Version Compatibility
+
+ Laravel  | Exposable
+:---------|:----------
+ 5.3      | 1.0.x
+ 5.4      | 1.1.x
+
 ## Installation
 The recommended way to install Exposable is through composer:
 ```bash
