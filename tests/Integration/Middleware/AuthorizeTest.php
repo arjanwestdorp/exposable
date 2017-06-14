@@ -21,7 +21,7 @@ class AuthorizeTest extends TestCase
     {
         $this->config('require-guard', false);
 
-        $this->get(url('/middleware-guard'))->see('You did it');
+        $this->get(url('/middleware-guard'))->assertSee('You did it');
     }
 
     /** @test */
@@ -35,7 +35,7 @@ class AuthorizeTest extends TestCase
     /** @test */
     public function it_succeeds_when_guard_is_authenticated()
     {
-        $this->get(url('/middleware-guard?guard=authenticated'))->see('You did it');
+        $this->get(url('/middleware-guard?guard=authenticated'))->assertSee('You did it');
     }
 
     /** @test */

@@ -35,6 +35,6 @@ class CheckExpirationTest extends TestCase
     /** @test */
     public function it_will_continue_if_the_url_is_not_expired()
     {
-        $this->get('/middleware-expire?expire='.Carbon::now()->addMinutes(5)->timestamp)->assertResponseOk()->see('You did it');
+        $this->get('/middleware-expire?expire='.Carbon::now()->addMinutes(5)->timestamp)->assertSuccessful()->assertSee('You did it');
     }
 }

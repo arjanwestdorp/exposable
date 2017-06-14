@@ -22,7 +22,7 @@ class ShowExposableTest extends TestCase
     {
         $attachment = $this->createAttachment();
 
-        $this->get($attachment->exposeUrl())->assertResponseStatus(200)->see('You did it');
+        $this->get($attachment->exposeUrl())->assertStatus(200)->assertSee('You did it');
     }
 
     /** @test */
@@ -34,6 +34,6 @@ class ShowExposableTest extends TestCase
 
         $attachment->delete();
 
-        $this->get($url)->assertResponseStatus(404);
+        $this->get($url)->assertStatus(404);
     }
 }

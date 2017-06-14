@@ -13,7 +13,9 @@ class AuthGuardTest extends TestCase
     {
         $this->be(factory(User::class)->create());
 
-        $this->visit(url('/middleware-guard?guard=auth'))->assertResponseOk()->see('You did it');
+        $this->get(url('/middleware-guard?guard=auth'))
+            ->assertSuccessful()
+            ->assertSee('You did it');
     }
 
     /** @test */
@@ -21,6 +23,6 @@ class AuthGuardTest extends TestCase
     {
         $this->disableExceptionHandling()->expectException(UnauthorizedException::class);
 
-        $this->visit(url('/middleware-guard?guard=auth'));
+        $this->get(url('/middleware-guard?guard=auth'));
     }
 }
