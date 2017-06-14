@@ -26,7 +26,7 @@ class ApplicationMiddlewareCanBeUsedTest extends TestCase
     {
         $this->disableExceptionHandling()->useAuthenticatedGuard()->expectException(AuthenticationException::class);
 
-        $this->get($this->createAttachment()->exposeUrl())->assertResponseStatus(401);
+        $this->get($this->createAttachment()->exposeUrl())->assertStatus(401);
     }
 
     /** @test */
@@ -34,6 +34,6 @@ class ApplicationMiddlewareCanBeUsedTest extends TestCase
     {
         $this->be(factory(User::class)->create());
 
-        $this->get($this->createAttachment()->exposeUrl())->assertResponseStatus(200)->see('You did it');
+        $this->get($this->createAttachment()->exposeUrl())->assertStatus(200)->assertSee('You did it');
     }
 }

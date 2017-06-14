@@ -52,6 +52,6 @@ class CheckSignatureTest extends TestCase
     /** @test */
     public function it_will_succeed_if_the_signature_matches_the_url()
     {
-        $this->get($this->getSignedUrl())->assertResponseOk()->see('You did it');
+        $this->get($this->getSignedUrl())->assertSuccessful()->assertSee('You did it');
     }
 }

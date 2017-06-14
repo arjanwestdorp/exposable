@@ -5,18 +5,16 @@ namespace ArjanWestdorp\Exposable\Test;
 use Exception;
 use Carbon\Carbon;
 use Illuminate\Foundation\Exceptions\Handler;
+use Orchestra\Database\ConsoleServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use ArjanWestdorp\Exposable\Test\Stubs\Attachment;
 use ArjanWestdorp\Exposable\ExposableServiceProvider;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use ArjanWestdorp\Exposable\Test\Stubs\FakeAuthenticatedGuard;
 use ArjanWestdorp\Exposable\Test\Stubs\FakeUnauthenticatedGuard;
 
-abstract class TestCase extends Orchestra
+class TestCase extends Orchestra
 {
-    use DatabaseMigrations;
-
     /**
      * Setup the test environment.
      */
@@ -98,6 +96,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
+            ConsoleServiceProvider::class,
             ExposableServiceProvider::class,
         ];
     }
