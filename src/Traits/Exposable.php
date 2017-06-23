@@ -2,28 +2,12 @@
 
 namespace ArjanWestdorp\Exposable\Traits;
 
-use ArjanWestdorp\Exposable\Signers\Signer;
-use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
+use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
+use ArjanWestdorp\Exposable\Signers\Signer;
 
 trait Exposable
 {
-    /**
-     * The guard to use when exposing this model.
-     * This will override the default.
-     *
-     * @var string|null
-     */
-    protected $exposableGuard = null;
-
-    /**
-     * Time before the expose url expires in minutes or as date modification.
-     * This will override the default.
-     *
-     * @var int|string|null
-     */
-    protected $exposableLifetime = null;
-
     /**
      * Expose the model.
      *
@@ -55,7 +39,7 @@ trait Exposable
     {
         $exposables = collect(config('exposable.exposables'))->flip();
 
-        if (! $exposables->has(self::class)) {
+        if (!$exposables->has(self::class)) {
             throw InvalidExposableException::exposableNotDefined(static::class);
         }
 
@@ -69,6 +53,10 @@ trait Exposable
      */
     protected function getExposableGuard()
     {
+        if (property_exists($this, 'exposableGuard')) {
+            return $this->exposableGuard;
+        }
+
         return $this->exposableGuard ?: config('exposable.default-guard');
     }
 
@@ -81,7 +69,7 @@ trait Exposable
      */
     public function setExposableGuard($guard)
     {
-        if (! config()->has('exposable.guards.'.$guard)) {
+        if (!config()->has('exposable.guards.' . $guard)) {
             throw InvalidGuardException::guardNotDefined($guard);
         }
 
@@ -97,6 +85,10 @@ trait Exposable
      */
     protected function getExposableLifetime()
     {
+        if (property_exists($this, 'exposableLifetime')) {
+            return $this->exposableLifetime;
+        }
+
         return $this->exposableLifetime ?: config('exposable.lifetime');
     }
 
