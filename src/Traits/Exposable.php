@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Traits;
 
-use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
-use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Signers\Signer;
+use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
+use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
 
 trait Exposable
 {
@@ -39,7 +39,7 @@ trait Exposable
     {
         $exposables = collect(config('exposable.exposables'))->flip();
 
-        if (!$exposables->has(self::class)) {
+        if (! $exposables->has(self::class)) {
             throw InvalidExposableException::exposableNotDefined(static::class);
         }
 
@@ -69,7 +69,7 @@ trait Exposable
      */
     public function setExposableGuard($guard)
     {
-        if (!config()->has('exposable.guards.' . $guard)) {
+        if (! config()->has('exposable.guards.'.$guard)) {
             throw InvalidGuardException::guardNotDefined($guard);
         }
 
