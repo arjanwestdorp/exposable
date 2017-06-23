@@ -9,22 +9,6 @@ use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
 trait Exposable
 {
     /**
-     * The guard to use when exposing this model.
-     * This will override the default.
-     *
-     * @var string|null
-     */
-    protected $exposableGuard = null;
-
-    /**
-     * Time before the expose url expires in minutes or as date modification.
-     * This will override the default.
-     *
-     * @var int|string|null
-     */
-    protected $exposableLifetime = null;
-
-    /**
      * Expose the model.
      *
      * @return \Illuminate\Http\Response
@@ -69,6 +53,10 @@ trait Exposable
      */
     protected function getExposableGuard()
     {
+        if (property_exists($this, 'exposableGuard')) {
+            return $this->exposableGuard;
+        }
+
         return $this->exposableGuard ?: config('exposable.default-guard');
     }
 
@@ -97,6 +85,10 @@ trait Exposable
      */
     protected function getExposableLifetime()
     {
+        if (property_exists($this, 'exposableLifetime')) {
+            return $this->exposableLifetime;
+        }
+
         return $this->exposableLifetime ?: config('exposable.lifetime');
     }
 
