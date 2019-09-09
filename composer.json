@@ -13,14 +13,14 @@
     {
       "name": "Arjan Westdorp",
       "email": "arjanwestdorp@gmail.com",
-      "homepage": "http://www.trait-development.nl",
+      "homepage": "https://www.trait-development.nl",
       "role": "Developer"
     }
   ],
   "require": {
-    "php": ">=5.6.0",
+    "php": ">=7.0.13",
     "illuminate/support": "^5.4",
-    "league/uri": "^4.2.2",
+    "league/uri": "^5.3",
     "nesbot/carbon": "^1.22"
   },
   "require-dev": {
@@ -28,7 +28,7 @@
     "laravel/framework": "^5.4.18",
     "orchestra/database": "~3.4.0",
     "orchestra/testbench": "~3.4.7",
-    "phpunit/phpunit": "5.7.*"
+    "phpunit/phpunit": "^6.5"
   },
   "autoload": {
     "psr-4": {
