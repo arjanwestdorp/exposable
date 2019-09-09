@@ -13,14 +13,14 @@
     {
       "name": "Arjan Westdorp",
       "email": "arjanwestdorp@gmail.com",
-      "homepage": "http://www.trait-development.nl",
+      "homepage": "https://www.trait-development.nl",
       "role": "Developer"
     }
   ],
   "require": {
     "php": ">=5.6.0",
     "illuminate/support": "^5.4",
-    "league/uri": "^4.2.2",
+    "league/uri": "^4.2.3",
     "nesbot/carbon": "^1.22"
   },
   "require-dev": {
