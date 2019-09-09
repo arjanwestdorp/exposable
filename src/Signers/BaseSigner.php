@@ -2,7 +2,7 @@
 
 namespace ArjanWestdorp\Exposable\Signers;
 
-use League\Uri\Schemes\Http;
+use League\Uri\Http;
 use League\Uri\Components\Query;
 use League\Uri\Modifiers\KsortQuery;
 
@@ -41,7 +41,9 @@ abstract class BaseSigner
      */
     public function has($key)
     {
-        return $this->uri->query->hasKey($key);
+        $query = new Query($this->uri->getQuery());
+
+        return $query->hasPair($key);
     }
 
     /**
@@ -51,7 +53,9 @@ abstract class BaseSigner
      */
     public function parameters()
     {
-        return $this->uri->query->count();
+        $query = new Query($this->uri->getQuery());
+
+        return $query->count();
     }
 
     /**
@@ -78,7 +82,7 @@ abstract class BaseSigner
     {
         $modifier = new KsortQuery();
 
-        $this->uri = $modifier->__invoke($this->uri);
+        $this->uri = $modifier->process($this->uri);
 
         return $this;
     }
@@ -92,7 +96,8 @@ abstract class BaseSigner
      */
     public function add($key, $value)
     {
-        $query = $this->uri->query->merge(Query::createFromPairs([
+        $query = new Query($this->uri->getQuery());
+        $query = $query->merge(Query::createFromPairs([
             $key => $value,
         ]));
 
@@ -139,7 +144,9 @@ abstract class BaseSigner
      */
     public function get($key)
     {
-        return $this->uri->query->getValue($key);
+        $query = new Query($this->uri->getQuery());
+
+        return $query->getPair($key);
     }
 
     /**
@@ -168,7 +175,9 @@ abstract class BaseSigner
      */
     public function delete($key)
     {
-        $without = $this->uri->query->without([$key]);
+        $query = new Query($this->uri->getQuery());
+
+        $without = $query->withoutPairs([$key]);
 
         $this->uri = $this->uri->withQuery($without->__toString());
 

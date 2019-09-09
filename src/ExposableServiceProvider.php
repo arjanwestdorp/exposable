@@ -41,10 +41,6 @@ class ExposableServiceProvider extends ServiceProvider
         $this->app->bind('exposable.signer', function () {
             return new ExposableSigner(config('exposable.key'));
         });
-
-        // TODO: check if we need a random key in the url for the signature
-        // (to avoid duplicates) Check how Amazon does that.
-        // TODO: Check the url encoding part / base64
     }
 
     /**
