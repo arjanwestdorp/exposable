@@ -2,11 +2,11 @@
 
 namespace ArjanWestdorp\Exposable\Http\Middleware;
 
-use Closure;
-use Illuminate\Http\Request;
-use ArjanWestdorp\Exposable\Guards\Guard;
 use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Exceptions\UnauthorizedException;
+use ArjanWestdorp\Exposable\Guards\Guard;
+use Closure;
+use Illuminate\Http\Request;
 
 class Authorize
 {

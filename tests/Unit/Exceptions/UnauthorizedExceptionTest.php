@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Unit\Exceptions;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Exceptions\UnauthorizedException;
 use ArjanWestdorp\Exposable\Test\Stubs\FakeAuthenticatedGuard;
+use ArjanWestdorp\Exposable\Test\TestCase;
 
 class UnauthorizedExceptionTest extends TestCase
 {

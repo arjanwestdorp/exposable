@@ -2,8 +2,8 @@
 
 namespace ArjanWestdorp\Exposable\Test\Integration\Middleware;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Test\Stubs\User;
+use ArjanWestdorp\Exposable\Test\TestCase;
 use Illuminate\Auth\AuthenticationException;
 
 class ApplicationMiddlewareCanBeUsedTest extends TestCase

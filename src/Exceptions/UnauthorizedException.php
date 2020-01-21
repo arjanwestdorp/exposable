@@ -2,8 +2,8 @@
 
 namespace ArjanWestdorp\Exposable\Exceptions;
 
-use Exception;
 use ArjanWestdorp\Exposable\Guards\Guard;
+use Exception;
 
 class UnauthorizedException extends Exception
 {

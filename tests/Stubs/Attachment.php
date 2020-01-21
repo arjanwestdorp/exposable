@@ -2,8 +2,8 @@
 
 namespace ArjanWestdorp\Exposable\Test\Stubs;
 
-use Illuminate\Database\Eloquent\Model;
 use ArjanWestdorp\Exposable\Traits\Exposable;
+use Illuminate\Database\Eloquent\Model;
 
 class Attachment extends Model
 {

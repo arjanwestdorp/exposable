@@ -2,8 +2,8 @@
 
 namespace ArjanWestdorp\Exposable\Signers;
 
-use League\Uri\Http;
 use League\Uri\Components\Query;
+use League\Uri\Http;
 use League\Uri\Modifiers\KsortQuery;
 
 abstract class BaseSigner

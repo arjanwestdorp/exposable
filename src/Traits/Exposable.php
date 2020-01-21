@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Traits;
 
-use ArjanWestdorp\Exposable\Signers\Signer;
-use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
+use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
+use ArjanWestdorp\Exposable\Signers\Signer;
 
 trait Exposable
 {

@@ -2,10 +2,10 @@
 
 namespace ArjanWestdorp\Exposable\Http\Middleware;
 
+use ArjanWestdorp\Exposable\Exceptions\InvalidSignatureException;
+use ArjanWestdorp\Exposable\Signers\Signer;
 use Closure;
 use Illuminate\Http\Request;
-use ArjanWestdorp\Exposable\Signers\Signer;
-use ArjanWestdorp\Exposable\Exceptions\InvalidSignatureException;
 
 class CheckSignature
 {
