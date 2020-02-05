@@ -1,6 +1,6 @@
 {
   "name": "arjanwestdorp/exposable",
-  "description": "A laravel 5 package to expose protected model in a secure way.",
+  "description": "A laravel package to expose protected model in a secure way.",
   "keywords": [
     "arjan",
     "westdorp",
@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": ">=7.0.13",
-    "illuminate/support": "^5.4",
+    "illuminate/support": "^5.4 || ^6.0",
     "league/uri": "^5.3",
     "nesbot/carbon": "^1.22 || ^2.0"
   },
