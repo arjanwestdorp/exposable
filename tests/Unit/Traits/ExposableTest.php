@@ -2,10 +2,10 @@
 
 namespace ArjanWestdorp\Exposable\Test\Unit\Traits;
 
-use Carbon\Carbon;
-use ArjanWestdorp\Exposable\Test\TestCase;
-use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Exceptions\InvalidExposableException;
+use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
+use ArjanWestdorp\Exposable\Test\TestCase;
+use Carbon\Carbon;
 
 class ExposableTest extends TestCase
 {

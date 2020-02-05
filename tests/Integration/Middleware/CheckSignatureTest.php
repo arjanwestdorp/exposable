@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Integration\Middleware;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
-use ArjanWestdorp\Exposable\Signers\Signer;
 use ArjanWestdorp\Exposable\Exceptions\InvalidSignatureException;
+use ArjanWestdorp\Exposable\Signers\Signer;
+use ArjanWestdorp\Exposable\Test\TestCase;
 
 class CheckSignatureTest extends TestCase
 {

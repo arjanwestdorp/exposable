@@ -2,10 +2,10 @@
 
 namespace ArjanWestdorp\Exposable\Http\Middleware;
 
-use Closure;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use ArjanWestdorp\Exposable\Exceptions\ExpiredExposableException;
+use Carbon\Carbon;
+use Closure;
+use Illuminate\Http\Request;
 
 class CheckExpiration
 {

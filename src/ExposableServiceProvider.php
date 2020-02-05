@@ -2,12 +2,12 @@
 
 namespace ArjanWestdorp\Exposable;
 
-use Illuminate\Support\ServiceProvider;
-use ArjanWestdorp\Exposable\Signers\ExposableSigner;
-use ArjanWestdorp\Exposable\Http\Middleware\Authorize;
-use ArjanWestdorp\Exposable\Http\Middleware\CheckSignature;
-use ArjanWestdorp\Exposable\Http\Middleware\CheckExpiration;
 use ArjanWestdorp\Exposable\Http\Controllers\ExposableController;
+use ArjanWestdorp\Exposable\Http\Middleware\Authorize;
+use ArjanWestdorp\Exposable\Http\Middleware\CheckExpiration;
+use ArjanWestdorp\Exposable\Http\Middleware\CheckSignature;
+use ArjanWestdorp\Exposable\Signers\ExposableSigner;
+use Illuminate\Support\ServiceProvider;
 
 class ExposableServiceProvider extends ServiceProvider
 {

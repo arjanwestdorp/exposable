@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Integration\Middleware;
 
-use Carbon\Carbon;
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Exceptions\ExpiredExposableException;
+use ArjanWestdorp\Exposable\Test\TestCase;
+use Carbon\Carbon;
 
 class CheckExpirationTest extends TestCase
 {

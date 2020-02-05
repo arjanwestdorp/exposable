@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Integration\Guards;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
-use ArjanWestdorp\Exposable\Test\Stubs\User;
 use ArjanWestdorp\Exposable\Exceptions\UnauthorizedException;
+use ArjanWestdorp\Exposable\Test\Stubs\User;
+use ArjanWestdorp\Exposable\Test\TestCase;
 
 class AuthGuardTest extends TestCase
 {

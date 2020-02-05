@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Integration\Middleware;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Exceptions\InvalidGuardException;
 use ArjanWestdorp\Exposable\Exceptions\UnauthorizedException;
+use ArjanWestdorp\Exposable\Test\TestCase;
 
 class AuthorizeTest extends TestCase
 {

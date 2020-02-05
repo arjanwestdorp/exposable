@@ -2,16 +2,16 @@
 
 namespace ArjanWestdorp\Exposable\Test;
 
-use Exception;
+use ArjanWestdorp\Exposable\ExposableServiceProvider;
+use ArjanWestdorp\Exposable\Test\Stubs\Attachment;
+use ArjanWestdorp\Exposable\Test\Stubs\FakeAuthenticatedGuard;
+use ArjanWestdorp\Exposable\Test\Stubs\FakeUnauthenticatedGuard;
 use Carbon\Carbon;
+use Exception;
+use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Foundation\Exceptions\Handler;
 use Orchestra\Database\ConsoleServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use ArjanWestdorp\Exposable\Test\Stubs\Attachment;
-use ArjanWestdorp\Exposable\ExposableServiceProvider;
-use ArjanWestdorp\Exposable\Test\Stubs\FakeAuthenticatedGuard;
-use ArjanWestdorp\Exposable\Test\Stubs\FakeUnauthenticatedGuard;
 
 class TestCase extends Orchestra
 {

@@ -2,8 +2,8 @@
 
 namespace ArjanWestdorp\Exposable\Test\Unit\Signers;
 
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Signers\Signer;
+use ArjanWestdorp\Exposable\Test\TestCase;
 
 class BaseSignerTest extends TestCase
 {

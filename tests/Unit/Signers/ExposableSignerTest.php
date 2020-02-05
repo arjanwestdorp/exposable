@@ -2,9 +2,9 @@
 
 namespace ArjanWestdorp\Exposable\Test\Unit\Signers;
 
-use Carbon\Carbon;
-use ArjanWestdorp\Exposable\Test\TestCase;
 use ArjanWestdorp\Exposable\Signers\Signer;
+use ArjanWestdorp\Exposable\Test\TestCase;
+use Carbon\Carbon;
 
 class ExposableSignerTest extends TestCase
 {
