@@ -18,10 +18,11 @@ checks:
         fix_doc_comments: true
 
 build:
-    tests:
-        override:
-            -
-                command: 'vendor/bin/phpunit --coverage-clover=build/logs/clover.xml'
-                coverage:
-                    file: 'build/logs/clover.xml'
-                    format: 'clover'
+    nodes:
+        coverage:
+            tests:
+                override:
+                    - command: 'vendor/bin/phpunit --coverage-clover=build/logs/clover.xml'
+                      coverage:
+                          file: build/logs/clover.xml
+                          format: clover
